@@ -14,7 +14,7 @@ View(ert)
 #Colgan's Revolutionary Leaders Dataset)
 
 VDemSub <- read_csv(here("data","VDemSub.csv"))
-view(VDemSub)
+View(VDemSub)
 
 summary(ert$year)
 summary(VDemSub$year)
@@ -26,7 +26,7 @@ MergedData1 <- merge(ert,VDemSub, by = c("country_name","year"))
 write.csv(MergedData1, file = here("data","VDem-ERT.csv"))
 
 revisionist <- read.csv(here("data","revisionist-ideology.csv"))
-view(revisionist)
+View(revisionist)
 
 merged2 <- merge(ert,revisionist, by = c("country_name","year"))
 
