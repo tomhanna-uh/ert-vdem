@@ -24,3 +24,10 @@ VDemSub <- VDemSub[which (VDemSub$year >= 1900), ]
 MergedData1 <- merge(ert,VDemSub, by = c("country_name","year"))
 
 write.csv(MergedData1, file = here("data","VDem-ERT.csv"))
+
+revisionist <- read.csv(here("data","revisionist-ideology.csv"))
+view(revisionist)
+
+merged2 <- merge(ert,revisionist, by = c("country_name","year"))
+
+write.csv(merged2,file = here("data","VDem-ERT-RDS.csv"))
