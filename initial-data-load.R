@@ -10,6 +10,12 @@ library(readr)
 ert <- read_csv(here("data","ERT.csv"))
 View(ert)
 
+#read in ERT using package
+
+library(ERT)
+ert2 <- get_eps()
+View(ert2)
+
 ###Read in revisionist ideology data (extracted from VDEM and
 #Colgan's Revolutionary Leaders Dataset)
 
